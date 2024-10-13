@@ -1,0 +1,50 @@
+var pet ={
+    name : "Jerry",
+    type : "cat",
+    age  :  3,
+    happiness: 70,
+    hunger:20,
+
+     feed: function() {
+        if (this.hunger >= 20) {
+          this.hunger -= 20;
+        } else {
+          this.hunger = 0;
+        }
+        alert(`${this.name} was feed! He is ${this.hunger} % hungry.`);
+      },
+    //   ______________________________________________________________
+    
+      play: function() {
+        if (this.happiness <= 80) {
+          this.happiness += 20;
+        } else {
+          this.happiness = 100;
+        }
+        alert(`${this.name} played! Happiness is now ${this.happiness}%.`);
+      },
+    //   _________________________________________________________________
+  
+    };
+    
+    function interactWithPet() {
+      var action = "";
+      while (action !== "exit") {
+        action = prompt(`What would you like to do with ${pet.name}? (feed, play, age, exit)`);
+        
+        if (action === "feed") {
+          pet.feed();
+        } else if (action === "play") {
+          pet.play();
+         } else if (action === "exit") {
+          alert(`Goodbye! ${pet.name} will miss you!`);
+        } else {
+          alert("Please choose a valid Action: feed, play, age, or Exit.");
+        }
+      }
+    }
+    
+    
+    interactWithPet();
+
+
