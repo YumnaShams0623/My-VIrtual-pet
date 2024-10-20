@@ -64,3 +64,10 @@ var pet = {
     this.happiness = Math.min(100, this.happiness + 20);
     alert(`You played with ${this.name}. Happiness is now ${this.happiness}.`);
   },
+  agePet: function() {
+    this.age += 1;
+    this.happiness = Math.max(0, this.happiness - 5);
+    this.hunger = Math.min(100, this.hunger + 10);
+    alert(`${this.name} has aged. Age is now ${this.age}. Happiness is ${this.happiness}. Hunger is ${this.hunger}.`);
+  },
+ 
