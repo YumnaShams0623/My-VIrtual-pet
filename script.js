@@ -60,4 +60,7 @@ var pet = {
     this.hunger = Math.max(0, this.hunger - 20);
     alert(`You fed ${this.name}. Hunger is now ${this.hunger}.`);
   },
-  
+  play: function() {
+    this.happiness = Math.min(100, this.happiness + 20);
+    alert(`You played with ${this.name}. Happiness is now ${this.happiness}.`);
+  },
