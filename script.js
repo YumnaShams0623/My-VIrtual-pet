@@ -78,5 +78,27 @@ var pet = {
 pet.name = prompt("What is your pet's name?");
 pet.type = prompt("What kind of pet is it?");
 pet.age = prompt("What's Your Pet age?")
+while (true) {
+  var action = prompt(`What would you like to do with ${pet.name}?\n1. Feed\n2. Play\n3. Age\n4. Check Stats\n5. Quit`);
+  switch (action) {
+    case "1":
+      pet.feed();
+      break;
+    case "2":
+      pet.play();
+      break;
+    case "3":
+      pet.agePet();
+      break;
+    case "4":
+      pet.displayStats();
+      break;
+    case "5":
+      alert(`Goodbye, ${pet.name}!`);
+      exit();
+    default:
+      alert("Invalid choice. Please try again.");
+  }
+}
 
 
