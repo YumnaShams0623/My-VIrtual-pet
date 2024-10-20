@@ -52,16 +52,16 @@ var pet = {
   name: "",
   type: "",
   age: 0,
-  happiness: 50,
-  hunger: 50,
+  happiness: "",
+  hunger: "",
 
  
   feed: function() {
-    this.hunger = Math.max(0, this.hunger - 20);
+    this.hunger = Math.max(this.hunger);
     alert(`You fed ${this.name}. Hunger is now ${this.hunger}.`);
   },
   play: function() {
-    this.happiness = Math.min(100, this.happiness + 20);
+    this.happiness = Math.min( this.happiness);
     alert(`You played with ${this.name}. Happiness is now ${this.happiness}.`);
   },
   agePet: function() {
@@ -70,18 +70,18 @@ var pet = {
     this.hunger = Math.min(100, this.hunger + 10);
     alert(`${this.name} has aged. Age is now ${this.age}. Happiness is ${this.happiness}. Hunger is ${this.hunger}.`);
   },
-  displayStatus: function() {
-    alert(`Name: ${this.name}\nType: ${this.type}\nAge: ${this.age}\nHappiness: ${this.happiness}\nHunger: ${this.hunger}`);
-  }
+ 
 };
 // ----------------------------------------------------------------
 pet.name = prompt("What is your pet's name?");
-pet.type = prompt("What kind of pet is it?");
+pet.type = prompt("What kind of pet is it (cat, dog , rabbit , bird )?");
 pet.age = prompt("What's Your Pet age?")
+pet.happiness = prompt("How Happy is your Pet?")
+pet.hunger = prompt("How hungry is your pet?")
 // ------------------------------------------------------------------
 
 while (true) {
-  var action = prompt(`What would you like to do with ${pet.name}?\n1. Feed\n2. Play\n3. Age\n4. Check Stats\n5. Quit`);
+  var action = prompt(`What would you like to do with ${pet.name}?\n1. Feed\n2. Play\n3. Age\n4.Quit`);
   switch (action) {
     case "1":
       pet.feed();
@@ -93,9 +93,6 @@ while (true) {
       pet.agePet();
       break;
     case "4":
-      pet.displayStatus();
-      break;
-    case "5":
       alert(`Goodbye, ${pet.name}!`);
       exit();
     default:
