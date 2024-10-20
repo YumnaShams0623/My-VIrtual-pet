@@ -70,7 +70,7 @@ var pet = {
     this.hunger = Math.min(100, this.hunger + 10);
     alert(`${this.name} has aged. Age is now ${this.age}. Happiness is ${this.happiness}. Hunger is ${this.hunger}.`);
   },
-  displayStats: function() {
+  displayStatus: function() {
     alert(`Name: ${this.name}\nType: ${this.type}\nAge: ${this.age}\nHappiness: ${this.happiness}\nHunger: ${this.hunger}`);
   }
 };
@@ -93,7 +93,7 @@ while (true) {
       pet.agePet();
       break;
     case "4":
-      pet.displayStats();
+      pet.displayStatus();
       break;
     case "5":
       alert(`Goodbye, ${pet.name}!`);
