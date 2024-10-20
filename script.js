@@ -68,7 +68,7 @@ var pet = {
     this.age += 1;
     this.happiness = Math.max(0, this.happiness - 5);
     this.hunger = Math.min(100, this.hunger + 10);
-    alert(`${this.name} has aged. Age is now ${this.age}. Happiness is ${this.happiness}. Hunger is ${this.hunger}.`);
+    alert(`${this.name}  is ${this.age} year old. Happiness is ${this.happiness}. Hunger is ${this.hunger}.`);
   },
  
 };
