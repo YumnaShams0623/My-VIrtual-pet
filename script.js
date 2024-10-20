@@ -55,4 +55,9 @@ var pet = {
   happiness: 50,
   hunger: 50,
 
-}
+ 
+  feed: function() {
+    this.hunger = Math.max(0, this.hunger - 20);
+    alert(`You fed ${this.name}. Hunger is now ${this.hunger}.`);
+  },
+  
