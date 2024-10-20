@@ -46,7 +46,7 @@
     
     
 //     interactWithPet();
-
+// -------------------------------------------------------------------------
 
 var pet = {
   name: "",
@@ -74,10 +74,12 @@ var pet = {
     alert(`Name: ${this.name}\nType: ${this.type}\nAge: ${this.age}\nHappiness: ${this.happiness}\nHunger: ${this.hunger}`);
   }
 };
-
+// ----------------------------------------------------------------
 pet.name = prompt("What is your pet's name?");
 pet.type = prompt("What kind of pet is it?");
 pet.age = prompt("What's Your Pet age?")
+// ------------------------------------------------------------------
+
 while (true) {
   var action = prompt(`What would you like to do with ${pet.name}?\n1. Feed\n2. Play\n3. Age\n4. Check Stats\n5. Quit`);
   switch (action) {
@@ -102,3 +104,4 @@ while (true) {
 }
 
 
+// ----------------------------------------------------------------
