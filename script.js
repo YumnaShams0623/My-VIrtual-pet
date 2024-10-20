@@ -74,3 +74,9 @@ var pet = {
     alert(`Name: ${this.name}\nType: ${this.type}\nAge: ${this.age}\nHappiness: ${this.happiness}\nHunger: ${this.hunger}`);
   }
 };
+
+pet.name = prompt("What is your pet's name?");
+pet.type = prompt("What kind of pet is it?");
+pet.age = prompt("What's Your Pet age?")
+
+
